@@ -8,7 +8,9 @@ $(call inherit-product, device/xiaomi/polaris/device.mk)
 
 # Inherit some common aospExtended stuff.
 TARGET_BOOT_ANIMATION_RES := 1080
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+  # $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_polaris
